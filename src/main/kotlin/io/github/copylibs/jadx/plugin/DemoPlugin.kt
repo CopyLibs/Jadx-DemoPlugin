@@ -1,6 +1,7 @@
 package io.github.copylibs.jadx.plugin
 
 import io.github.copylibs.jadx.plugin.action.JvmDescAction
+import io.github.copylibs.jadx.plugin.action.KavaRefCodeAction
 import jadx.api.plugins.JadxPlugin
 import jadx.api.plugins.JadxPluginContext
 import jadx.api.plugins.JadxPluginInfo
@@ -26,6 +27,7 @@ class DemoPlugin : JadxPlugin {
 
 		if (options.isEnabled) {
 			JvmDescAction(guiContext, decompiler, options).initMenu()
+			KavaRefCodeAction(guiContext, decompiler, options).initMenu()
 		}
 	}
 }

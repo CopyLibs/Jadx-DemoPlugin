@@ -112,9 +112,13 @@ class JvmDescAction(
 			}
 
 			type.isArray -> "[" + getTypeDesc(type.arrayElement)
+
 			type.isObject && type.isGeneric -> getTypeDesc(ArgType.`object`(type.`object`))
+
 			type.isObject && type.isGenericType -> getTypeDesc(Object::class.java.name)
+
 			type.isObject -> getTypeDesc(type.`object`)
+
 			else -> throw JadxRuntimeException("Unsupported type: $type")
 		}
 	}

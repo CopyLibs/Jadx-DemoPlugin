@@ -18,6 +18,7 @@ repositories {
 
 dependencies {
 	compileOnly("io.github.skylot:jadx-core:1.5.5")
+	implementation("org.slf4j:slf4j-api:2.0.17")
 }
 
 tasks {
